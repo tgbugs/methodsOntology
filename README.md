@@ -19,6 +19,11 @@ nsmethods.ttl will hold the methods concepts
 nsbeing.ttl will hold entities that are subjects/specimines or tools/reagents
 nsdatatypes.ttl will hold datatypes that are the outputs of methods
 
+#### Editing ttl files
+In order to keep diffs between edits to a minimum please use the version of protege found
+[here](https://github.com/ignazio1977/protegetests/blob/master/protege-distribution-5.0.0-beta-18-SNAPSHOT-platform-independent.zip).
+It uses OWLAPIv4 which produces deterministic ttl files.
+
 ### scigraph/
 Scigraph configuration yaml files. To build scigraph and load the correct ontologies do the following.
 Be sure to replace `git/` with the path where you have cloned the repos.
