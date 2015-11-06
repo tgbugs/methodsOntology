@@ -9,11 +9,20 @@ Source files that are inputs for generating the ttl files.
 The code that generates the ttl.
 
 ### ttl/
+#### ALERT ACHTUNG ATTENTION
+_Identifiers contained herein are currently TEMPORARY
+PLEASE do not let them into the wild!_
+
 Ontology outputs to be loaded into scigraph.
 nsupper.ttl holds an absurdly lightweight upper ontology
 nsmethods.ttl will hold the methods concepts
 nsbeing.ttl will hold entities that are subjects/specimines or tools/reagents
 nsdatatypes.ttl will hold datatypes that are the outputs of methods
+
+#### Editing ttl files
+In order to keep diffs between edits to a minimum please use the version of protege found
+[here](https://github.com/ignazio1977/protegetests/blob/master/protege-distribution-5.0.0-beta-18-SNAPSHOT-platform-independent.zip).
+It uses OWLAPIv4 which produces deterministic ttl files.
 
 ### scigraph/
 Scigraph configuration yaml files. To build scigraph and load the correct ontologies do the following.
@@ -34,6 +43,17 @@ methods concepts that describe those protocols.
 The basic structure for each obo file will be a single parrent is_a hierarchy.
 Other limited modeling may be added later as needed in order to serve other systems
 that will directly represent protocols themselves.
+
+### Identifier naming conventions
+To make it easy to distinguish between curated and uncurated terms in raw ttl
+we will _by convention_ (as in, do not rely on this for code because it will
+not be enforced systematically) use the following:
+```
+UNCURATED:1234567
+NOTINANONTOLOGY:1234567
+CURATED:fragprefix_1234567
+```
+Curie mappings: UH OH
 
 ## Synonyms
 Within the annotation ontology synonyms will simply be text strings that are
