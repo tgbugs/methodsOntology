@@ -10,7 +10,7 @@
 @prefix efo: <http://www.ebi.ac.uk/efo/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix nsu: <http://www.FIXME.org/nsupper#> .
-@prefix HBP_PROP: <http://www.hbp.FIXME.org/> .
+@prefix HBP_PROP: <http://www.hbp.FIXME.org/hbp_properties/> .
 @prefix HBP_TAX: <http://www.hbp.FIXME.org/hbp_taxonomy_ontology/> .
 @base <http://www.hbp.FIXME.org/hbp_taxonomy_ontology> .
 
@@ -116,8 +116,8 @@ HBP_TAX:9999995 rdf:type owl:Class ;
 
 
 HBP_TAX:9999996 rdf:type owl:Class ;
-                 rdfs:label "species"@en ;                 rdfs:subClassOf HBP_TAX:9999995 .
-
+                 rdfs:label "species"@en ;                 
+                 rdfs:subClassOf HBP_TAX:9999995 .
 
 
 HBP_TAX:9999997 rdf:type owl:Class ;
@@ -190,5 +190,12 @@ efo:EFO_0004472 rdf:type owl:Class ;
                             "CB57"@en .
 
 
+## http://www.ebi.ac.uk/efo/EFO_0001342                            
 
-
+efo:EFO_0001342 rdf:type owl:Class ;
+                rdfs:label "Wistar"@en ;
+                rdfs:subClassOf obo:NCBITaxon_10116 ;
+                HBP_PROP:has_rank HBP_TAX:9999998 ;
+                nsu:synonym "Rats, Wistar" ,
+                            "Wistar rat" ,
+                            "Wistar rats".
